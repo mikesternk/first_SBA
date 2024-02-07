@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael's Stick Empires Recreation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html, body {
+            height: 100vh;
+            margin: 0px 110px;
+            background-color: #25282B;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .main-container>section$*3 -->
+    <!-- .main-container>.rightside+.mainpage+.leftside -->
+    <div class="main-container">
+        <div class="rightside">
+            <img src="/Img/RightSide.png" alt="Right Side Image">
+        </div>
+        <div class="mainpage">
+            <div id="castle">
+                <img src="/Img/Castle.png" alt="Castle">
+            </div>
+           <div class="logo">
+                <img src="Img/Logo.png" alt="Stick Empires" style="font-size: 60px;">
+                <!-- <p style="font-size: 60px;">Stick<br>Empires</p> -->
+           </div>
+            <div class="login-form">
+                <form action="home.html">
+                    <label for="username" style="color: #daa03f">USERNAME</label>
+                    <input type="text" required><br>
+                    <label for="password" style="color: #daa03f">PASSWORD</label>
+                    <input type="password" required><br>
+                    <input type="submit" class="signIn" value="SIGN IN"><br>
+                    <a href="">Forgotten your Password?</a>
+                </form>
+            </div>
+            <div class="signUp-form">
+                <form action="#popup1">
+                    <label for="new">New Player?</label><br>
+                    <input type="submit" class="signUp" value="SIGN UP NOW">
+                    <!-- <div id="info" style="color: white; font-size: x-large;">!</div> -->
+                </form>
+            </div>
+        </div>
+        <div class="leftside">
+            <img src="/Img/LeftSide2.png" alt="Left Side Image">
+            <div class="performance-patch">
+                <img src="/Img/Perfomance.png" alt="Two Wrenches" style="float: left;">
+                <h4 style="float: right; margin-top: .2em; padding: 5px; color: white;">Perfomance Patch</h4>
+            </div>
+            <div class="patch">
+                <!-- &nbsp adds a whitespace -->
+                <p style="font-size: x-small">2024:02:02 &nbsp;&nbsp;&nbsp; 21:30:23 <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi modi iusto iste rem, reiciendis a deserunt corporis provident necessitatibus mollitia ipsum, odit numquam nemo harum voluptatem, ratione eaque? Nobis, voluptatem.</p>
+            </div>
+        </div>
+    </div>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <form action="home.html">
+                <label for="username">USERNAME</label><br>
+                <input type="text" required><br>
+                <label for="email">EMAIL</label><br>
+                <input type="email" required><br>
+                <label for="password">CREATE PASSWORD</label><br>
+                <input type="password" required><br>
+                <label for="confirm">CONFIRM PASSWORD</label><br>
+                <input type="password" required><br>
+                <div class="align">
+                    <p style="font-size: small;">I agree to the Stick Empires <a href="#">Terms of Service</a></p>
+                    <input type="submit" class="register" value="REGISTER" style="font-weight: bold;">
+                </div>
+            </form>
+            <a class="close" href="#">&times;</a>
+        </div>
+    </div>
+</body>
+</html>

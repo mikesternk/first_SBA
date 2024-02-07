@@ -1,0 +1,454 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html, body {
+    height: 100%;
+}
+
+.main-container {
+    background-color:  gray; 
+    border: 1px solid black;
+    height: 100%;
+    display: flex;
+    flex-flow: wrap row;
+}
+
+.rightside, .leftside {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rightside {
+    width: 32%;
+    height: 100%;
+}
+.rightside img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.leftside {
+    width: 32%;
+    height: 100%;
+    position: relative;
+}
+.leftside img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.performance-patch, .patch {
+    position: absolute;
+    bottom: 0;
+}
+.performance-patch {
+    background-color: #020000;
+    width: 72%;
+    height: 20%;
+
+    right: 9%;
+}
+.performance-patch img {
+    object-fit: contain;
+    width: 15%;
+    position: relative;
+    left: 5%;
+    top: 2px;
+}
+.patch {
+    overflow: hidden;
+    color: white;
+    font-size: smaller;
+    background-color: black;
+    width: 59%;
+    height: 14%;
+
+    /* Position: absolute */
+    right: 12%;
+}
+
+.mainpage {
+    background-color: #202b36;
+    width: 36%;
+    height: 100%;
+    display: flex;
+    flex-flow: wrap column;
+    text-align: center;
+    justify-content: flex-end;
+    position: relative;
+}
+#castle {
+    height: 29%;
+    width: 100%;
+    position: absolute;
+    top: -5%;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Img/Castle.png"); */
+}
+#castle img {
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.logo {
+    justify-content: center;
+    background-color: none;
+    z-index: 1;
+    height: 36%;
+    width: 110%;
+    /* Allows the box to appear to float off from the parent box */
+    position: relative;
+    left: 0;
+    /* Tried Using relative position for all the content, but opted to using justify content instead */
+    /* position: relative;
+    top: 18%;
+    left: -10%; */
+    
+}
+.logo img {
+    height: 110%;
+    position: absolute;
+    left: -20%;
+    top: -15%;
+}
+.login-form{
+    /* background-color: #020000; */
+    display: flex;
+    padding: 0 10px;
+    flex-wrap: wrap row;
+    width: 100%;
+    height: 27%;
+    position: relative;
+    /* top: 18%; */
+} 
+.signIn{
+    width: 50%;
+    height: 30%;
+    left: 25%;
+}
+.signUp-form {
+    color: lightgray;
+    width: 100%;
+    height: 18%;
+    position: relative;
+}
+.signUp {
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    left: 25%;
+}
+.login-form, .signUp-form {
+    border: 5px solid #202b36;
+    background-color: #020000;
+    border-radius: 10%/20%;
+}
+.signIn, .signUp {
+    color: #21150e;
+    background-color: #4d3426;
+    border-radius: 10%/50%;
+    cursor: pointer;
+}
+.signIn:hover, .signUp:hover {
+    box-shadow: rgba(218, 160, 63, .7) 0px 2px 4px, rgba(218, 160, 63, .7) 0px 7px 30px 1px, rgba(218, 160, 63, .1) 0px -3px 0px inset;
+    color: #daa03f;
+}
+.signIn:active, .signUp:active {
+    box-shadow: rgba(218, 160, 63, .7) 0px 2px 4px, rgba(218, 160, 63, .7) 0px 7px 30px 1px, rgba(218, 160, 63, .1) 0px -3px 0px inset;
+    background-color: #21150e;
+}
+.login-form a {
+    position: absolute;
+    left: 30%;
+    text-decoration: none;
+    color: lightgray;
+    font-size: x-small;
+    justify-content: center;
+}
+.login-form a:hover, a:active {
+    color: #daa03f;
+}
+/* #info {
+    border: 1px solid peru;
+    background-color: red;
+    width: 8%;
+    height: 30%;
+    border-radius: 50%;
+    
+    position: absolute;
+    left: 22%;
+    top: 12%;
+} */
+
+/* Spaces between buttons and input text boxes */
+form {
+    margin: 0.4rem 0;
+    padding: 1px;
+}
+label, input {
+    margin: 0.4rem 0;
+}
+
+/* Regitration Pop Up */
+.overlay {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    z-index: 2;
+    color: #daa03f;
+    margin:  300px auto;
+    margin-bottom: 0%;
+    padding: 15px 0 10px 20px;
+    background: #020000;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    bottom: 0;
+    transition: all 1s ease-in-out;
+}
+.popup input {
+    background-color: #daa03f;
+    border: 1px solid white;
+}
+
+.popup input {
+    padding: 1px;
+    width: 90%;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+}
+
+.popup .close:hover {
+    color: #daa03f;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+.align {
+    height: 100%;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.align a{
+    text-decoration: none;
+    color: blue;
+}
+.align a:hover, a:active{
+    text-decoration: none;
+    color: gray;
+}
+.align .register {
+    height: 30px;
+    width: 40%;
+    background-color: #332401;
+    color: white;
+}
+
+.align .register:hover, .register:active {
+    background-color: #daa03f;
+    color: #332401;
+    cursor: pointer;
+}
+
+
+/* Home Page */
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    /* top: 25px; */
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.userName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    width: 300px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    margin-left: 40px;
+    transition: .5s;
+}
+.userName:hover {
+    background: #fff;
+    color: red;
+}
+
+
+@media screen and (max-width: 700px)
+{
+    .box {
+        width: 70%;
+    }
+    .popup {
+        width: 70%;
+    }
+}
+
+/* NAVIGATION BAR WITH DROPDOWN MENU */
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 5%;
+    background: transparent;
+}
+body {
+    background-color: red;
+}
+.dropdown-menu #menu-icon {
+    padding: 5px;
+    border: none;   
+    color: white;
+    font-size: 30px;
+    z-index: 999;
+    cursor: pointer;
+    padding: 0px 15px;
+    /* display: none; */
+}
+.dropdown-menu #menu-icon:hover {
+    color:#fffb;
+
+    transform: translateX(50%);
+    transition: transform .5s ease-in-out;
+}
+.dropdown-menu #menu-icon:active {
+    color:#fffb;
+    font-size: 40px;
+    
+    transform: translateX(50%);
+    transition: all .5s ease;
+}
+.dropdown-menu a{
+    display: block;
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown-menu .content {
+    display: none;
+    background-color: #fff3;
+    position: absolute;
+    min-width: 200px;
+    right: 0;
+    border-radius: 5%/5%;
+    
+    /* box-shadow: horizontal-position, vertical-position, blur, color */
+    box-shadow: 2px 2px 7px black;
+}
+.dropdown-menu:hover .content {
+    display: block;
+}
+.dropdown-menu a:hover {
+    background-color: #fff7;
+    border-radius: 5%/5%;
+}
+.userName {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+.navlist {
+    display: flex;
+}
+.navlist a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navlist a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navlist a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navlist .isActive {
+    position: relative;
+    font-size: 1.1em;
+    color: red;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}

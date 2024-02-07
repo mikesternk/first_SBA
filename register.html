@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            text-align:center;
+            color: #daa03f;
+            margin: 80px 0;
+        }
+
+        .box {
+            width: 40%;
+            margin: 0 auto;
+            background: rgba(0,0,0, 0.2);
+            border-radius: 20px/50px;
+            padding: 35px;
+            border: 2px solid black;
+            background-clip: padding-box;
+            text-align: center;
+        }
+
+        .button {
+            font-size: 1em;
+            padding: 10px;
+            color: #daa03f;
+            border: 2px solid #daa03f;
+            border-radius: 20px/50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.1s ease-out;
+        }
+
+        .button:hover{
+            background: #daa03f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>PopUp for Registration</h1>
+    <div class="box">
+        <a class="button" href="#popup1">Let Me Popup</a>
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <form action="home.html">
+                <label for="username">USERNAME</label><br>
+                <input type="text"><br>
+                <label for="email">EMAIL</label><br>
+                <input type="email" required><br>
+                <label for="password">CREATE PASSWORD</label><br>
+                <input type="password" required><br>
+                <label for="confirm">CONFIRM PASSWORD</label><br>
+                <input type="password"><br>
+                <div class="align">
+                    <p style="font-size: small;">I agree to the Stick Empires <a href="#">Terms of Service</a></p>
+                    <input type="submit" class="register" value="REGISTER" style="font-weight: bold;">
+                </div>
+            </form>
+            <a class="close" href="#">&times;</a>
+            <!-- <div class="content">Thanks to pop me out of that button, but now I'm done so you can close this window.</div> -->
+        </div>
+    </div>
+</body>
+</html>

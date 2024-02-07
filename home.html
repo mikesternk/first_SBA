@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(/Img/stick-blue-orange.webp) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            font-family: 'Poppins', sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navlist .isActive {
+            position: relative;
+            font-size: 1.1em;
+            color: red;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 40px;
+        }
+
+        /* .theFaction {
+            display: flex;
+            position: absolute;
+            bottom: 5px;
+            background-color: #fff8;
+            border: 1px solid black;
+            width: 100%;
+            height: 84vh;
+            flex-flow: wrap row;
+        }
+
+        .theFaction h1 {
+            background-color: red;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            text-align: center;
+        }
+        .factions {
+            background-color: pink;
+            flex-flow: wrap column;
+            width: 50%;
+            max-height: 100%;
+            height: auto;
+            flex: 1;
+        }
+        .faction {
+            width: 50%;
+        } */
+        
+    </style>
+    
+</head>
+<body>
+    <header>
+        <a href="#" class="userName">Welcome, User</a>
+        <ul class="navlist">
+            <li><a href="home.html" class="isActive">Home</a></li>
+            <li><a href="coming-soon.html">Armory</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+            <li><a href="coming-soon.html">Options</a></li>
+        </ul>
+        <div class="dropdown-menu">
+            <div id="menu-icon">
+                <i class="ri-menu-line"></i>
+            </div>
+            <div class="content">
+                <a href="coming-soon.html">Settings</a>
+                <a href="login.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="theFaction" style="color: goldenrod; font-size: xx-large; cursor:wait;">
+        <h1 >Choose Your Faction</h1>
+        <div class="factions">
+            <div class="faction order">
+                Order
+            </div>
+            <div class="faction chaos">
+                Chaos
+            </div>
+        </div>
+    </section>
+</body>
+</html>
